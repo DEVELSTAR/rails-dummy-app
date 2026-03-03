@@ -1,0 +1,62 @@
+<div class="space-y-12">
+  <!-- Hero Section -->
+  <section class="text-center py-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white">
+    <div class="max-w-4xl mx-auto px-8 py-16">
+      <h1 class="text-5xl font-bold mb-6">Welcome to RailsApp</h1>
+      <p class="text-xl mb-8 text-blue-100">A modern, beautiful Rails application with full CRUD functionality</p>
+      <div class="space-x-4">
+        <%= link_to "View Posts", posts_path, class: "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" %>
+        <%= link_to "Learn More", about_path, class: "border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Full CRUD Operations</h3>
+      <p class="text-gray-600">Create, read, update, and delete posts with a beautiful interface</p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Modern Design</h3>
+      <p class="text-gray-600">Built with Tailwind CSS for a clean, responsive experience</p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Fast & Responsive</h3>
+      <p class="text-gray-600">Optimized performance and mobile-friendly design</p>
+    </div>
+  </section>
+
+  <!-- Recent Posts Preview -->
+  <section class="bg-white rounded-xl shadow-md p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">Recent Posts</h2>
+      <%= link_to "View All Posts", posts_path, class: "text-blue-600 hover:text-blue-800 font-medium" %>
+    </div>
+    
+    <div class="text-center py-8 text-gray-500">
+      <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+      </svg>
+      <p class="text-lg">No posts yet. Create your first post!</p>
+      <%= link_to "Create Post", new_post_path, class: "inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" %>
+    </div>
+  </section>
+</div>

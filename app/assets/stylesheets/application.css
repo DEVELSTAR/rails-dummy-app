@@ -1,0 +1,32 @@
+/* Basic Responsive Layout */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* On small screens, stack the navigation links */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+}

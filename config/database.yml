@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: akibdemo_admin          # Your DB user
+  password: Akibu1@asd                # Your password
+  host: localhost                   # Usually localhost on cPanel
+
+development:
+  <<: *default
+  database: akibdemo_ruby           # Your DB name (may need prefix like akibdemo_akibdemo_ruby — check below)
+
+test:
+  <<: *default
+  database: akibdemo_ruby      # Optional: create a separate test DB if needed
+
+production:
+  <<: *default
+  database: akibdemo_ruby           # Same DB for production (or create a separate one)

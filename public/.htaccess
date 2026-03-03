@@ -1,0 +1,5 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/akibdemo/rails"
+PassengerBaseURI "/"
+PassengerRuby "/home/akibdemo/rubyvenv/rails/3.4/bin/ruby"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
