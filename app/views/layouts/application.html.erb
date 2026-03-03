@@ -13,12 +13,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-gray-50 min-h-screen">
+  <body class="bg-gray-50 min-h-screen flex flex-col">
     <header class="bg-white shadow-sm border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-900">RailsApp</h1>
+            <%= link_to root_path, class: "flex items-center" do %>
+              <h1 class="text-xl sm:text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">RailsApp</h1>
+            <% end %>
           </div>
           <nav class="hidden sm:block">
             <ul class="flex space-x-4 sm:space-x-6 lg:space-x-8">
@@ -30,23 +32,23 @@
           </nav>
           <!-- Mobile menu button -->
           <div class="sm:hidden">
-            <button class="text-gray-700 hover:text-blue-600 p-2">
+            <button type="button" class="text-gray-700 hover:text-blue-600 p-2 rounded-md" onclick="toggleMobileMenu()">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
           </div>
         </div>
-      </div>
-      <!-- Mobile menu -->
-      <div class="sm:hidden border-t border-gray-200">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <%= link_to "Home", root_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
-          <%= link_to "Posts", posts_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
-          <%= link_to "About", about_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
-          <%= link_to "Contact", contact_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
+        
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden border-t border-gray-200">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <%= link_to "Home", root_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
+            <%= link_to "Posts", posts_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
+            <%= link_to "About", about_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
+            <%= link_to "Contact", contact_path, class: "block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium" %>
+          </div>
         </div>
-      </div>
     </header>
     
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -72,5 +74,12 @@
         </div>
       </div>
     </footer>
+    
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
   </body>
 </html>
